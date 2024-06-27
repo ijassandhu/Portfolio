@@ -1,7 +1,18 @@
-const navDialog = document.getElementById("nav-dialog");
+// Function to toggle the menu visibility
 function handleMenu() {
-  navDialog.classList.toggle("hidden");
+  var navDialog = document.getElementById('nav-dialog');
+  navDialog.classList.toggle('hidden');
 }
+
+// Add event listeners to close the menu when a navigation link is clicked
+document.querySelectorAll('.nav-link').forEach(item => {
+  item.addEventListener('click', () => {
+      var navDialog = document.getElementById('nav-dialog');
+      navDialog.classList.add('hidden');
+  });
+});
+
+
 var typed = new Typed(".auto-type", {
   strings: ["Web Designer.", "Frontend Developer."],
   typeSpeed: 200,
@@ -33,3 +44,7 @@ function scrollFunction() {
 mybutton.onclick = function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
+$("a").click(function(){
+  var pageId = $(this).attr("data-page");
+  $("html, body").animate({ scrollTop: $("#"+pageId).offset().top }, 1000);
+});
