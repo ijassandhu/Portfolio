@@ -22,7 +22,7 @@ var typed = new Typed(".auto-type", {
 
 function resumeLink() {
   window.open(
-    "https://drive.google.com/file/d/16OBrLSBicjx85nuOPtbETvHIXk-e06ef/view?usp=drivesdk"
+    "https://drive.google.com/file/d/16ZV820CCyxy6ZvGR2Sb_gPBfWEJ3DrHU/view?usp=drivesdk"
   );
 }
 
