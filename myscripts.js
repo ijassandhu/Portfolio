@@ -1,15 +1,15 @@
 // Function to toggle the menu visibility
 function handleMenu() {
-  var navDialog = document.getElementById('nav-dialog');
-  navDialog.classList.toggle('hidden');
+    var navDialog = document.getElementById('nav-dialog');
+    navDialog.classList.toggle('hidden');
 }
 
 // Add event listeners to close the menu when a navigation link is clicked
 document.querySelectorAll('.nav-link').forEach(item => {
-  item.addEventListener('click', () => {
-      var navDialog = document.getElementById('nav-dialog');
-      navDialog.classList.add('hidden');
-  });
+    item.addEventListener('click', () => {
+        var navDialog = document.getElementById('nav-dialog');
+        navDialog.classList.add('hidden');
+    });
 });
 
 
