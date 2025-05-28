@@ -8,7 +8,7 @@ const Message = require("./models/Message");
 const app = express();
 app.use(
   cors({
-    origin: "https://ijassandhu.vercel.app/",
+    origin: ["https://ijassandhu.vercel.app/"],
     methods: ["POST", "GET"],
   })
 );
@@ -34,6 +34,6 @@ app.get("/api/messages", async (req, res) => {
 });
 
 // Start server
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log(`Server running on ${PORT}`);
 });
