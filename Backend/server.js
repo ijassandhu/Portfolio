@@ -15,10 +15,7 @@ app.use(
 app.use(express.json());
 const PORT = process.env.PORT;
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"));
 
 app.post("/api/contact", async (req, res) => {
