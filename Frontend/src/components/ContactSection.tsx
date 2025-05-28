@@ -48,7 +48,10 @@ export function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      await axios.post("http://localhost:5000/api/contact", formData);
+      await axios.post(
+        "https://portfolio-1q0o.onrender.com/api/contact",
+        formData
+      );
 
       toast({
         title: "Message sent!",
