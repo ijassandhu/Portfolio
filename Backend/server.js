@@ -8,7 +8,7 @@ const Message = require("./models/Message");
 const app = express();
 app.use(
   cors({
-    origin: "ijassandhu.vercel.app",
+    origin: "https://ijassandhu.vercel.app/",
     methods: ["POST", "GET"],
   })
 );
