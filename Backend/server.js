@@ -6,7 +6,6 @@ require("dotenv").config();
 const Message = require("./models/Message");
 
 const app = express();
-const cors = require("cors");
 app.use(
   cors({
     origin: "ijassandhu.vercel.app",
