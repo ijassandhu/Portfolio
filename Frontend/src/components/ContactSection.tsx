@@ -50,7 +50,12 @@ export function ContactSection() {
     try {
       await axios.post(
         "https://portfolio-1q0o.onrender.com/api/contact",
-        formData
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
 
       toast({
@@ -60,6 +65,7 @@ export function ContactSection() {
 
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (err) {
+      console.log(err);
       toast({
         title: "Failed to send message",
         description: "Please try again later.",
