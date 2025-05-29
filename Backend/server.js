@@ -6,13 +6,7 @@ require("dotenv").config();
 const Message = require("./models/Message");
 
 const app = express();
-app.use(
-  cors({
-    origin: ["https://ijassandhu.vercel.app", "http://192.168.29.253:8080"],
-    methods: ["POST", "GET"],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.json());
 const PORT = 5000;
 mongoose
