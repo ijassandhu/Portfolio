@@ -8,12 +8,13 @@ const Message = require("./models/Message");
 const app = express();
 app.use(
   cors({
-    origin: ["https://ijassandhu.vercel.app/"],
+    origin: ["https://ijassandhu.vercel.app", "http://192.168.29.253:8080"],
     methods: ["POST", "GET"],
+    credentials: true,
   })
 );
 app.use(express.json());
-const PORT = process.env.PORT;
+const PORT = 5000;
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"));
