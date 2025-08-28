@@ -17,7 +17,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     name: "Tools & Others",
-    skills: ["Git", "Figma", "VS Code", "Docker"],
+    skills: ["Git", "Figma", "VS Code", "n8n"],
   },
   {
     name: "Soft Skills",
